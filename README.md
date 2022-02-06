@@ -1,4 +1,7 @@
-This is a scheduling system for a doctor(organiser) who can get bookings from their patients(attendee/user).
+This is a simple scheduling system for a organiser who can get bookings from their attendee/user using a calendar.
+
+It sort of tries to build a Calendly like system.
+
 
 Requirements:
 
