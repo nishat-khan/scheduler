@@ -1,0 +1,25 @@
+<form action={{ url_for("get_user") }} method="post">
+  <div class="elem-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+  </div>
+  <div class="elem-group">
+    <label for="email">Your E-mail</label>
+    <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+  </div>
+  <div class="elem-group">
+    <label for="phone">Your Phone</label>
+    <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+  </div>
+  <hr>
+  <div class="elem-group inlined">
+    <label for="start-time">Start time</label>
+    <input type="datetime-local" id="start-time" name="start-time" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="end-time">End time</label>
+    <input type="datetime-local" id="end-time" name="end-time" required>
+  </div>
+  <hr>
+  <button type="submit">Book Appointment</button>
+</form>

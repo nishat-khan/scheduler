@@ -7,7 +7,6 @@ Requirements:
 
 Assumptions:
 1. Only one attendee per slot
-2. Slot is fixed
 3. Only one organizer
 4. Attendee's availability is not checked through their calendar.
 
@@ -18,9 +17,17 @@ Functional requirements(Must haves):
    3. contact
    4. start date time (resolve time zone)
    5. end date time (resolve time zone)
-2. Send an invite to attendee's email. Direct to received appointment page.
+   age, gender
+2. Send an invite to attendee's email. Direct to "received appointment" page.
 3. Update the meeting on user's request- modify, cancel.
-4. Update organiser's calendar
+4. Update organiser's calendar.
+
+Secondary requirements:
+1. User address
+2. Pull User calendar and update
+3. Make it multi organiser
+4. Page for organiser
+
 
 Working process:
 0. Read about a little on system design concepts. Youtube videos had examples, but couldn't really give me the pattern except for some basic relational datatables.
@@ -38,10 +45,11 @@ Saturday,February 5, 2022:
    1. Decided not to complicate things by asking google oAuth login (secondary requirement for now)
 4. 11 35 pm:
    1. Think about database tables
-   2. User datatable - id, Functional requirements 1 points, booking_status
-   3. 
-   
-   
+   2. User datatable - id, name, email,contact
+   3. Events datatable - id, booking_status, user_id, event_name, event_description(optional), start_datetime, end_datetime, allday(optional)
+      join user and events table isnewpatient, num_visits 
+   4. Try JS? TODO
+   5. Organisers schedule - available time in a sorted manner
     
     
 
@@ -49,6 +57,4 @@ Saturday,February 5, 2022:
 
 
 References:
-
-1. https://realpython.com/flask-google-login/ - Didnt implement
-2. https://www.youtube.com/watch?v=rHZwE1AK1h8  -  Appointment form
+1. https://www.youtube.com/watch?v=rHZwE1AK1h8  -  Appointment form
